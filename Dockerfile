@@ -18,7 +18,7 @@ RUN /usr/sbin/usermod -u 99 nobody && \
     git && \
     mkdir -p /var/log/supervisor
 
-RUN export USER=root && npm install -g babel@5
+RUN export USER=root && npm install -g --unsafe-perm babel@5
 
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
